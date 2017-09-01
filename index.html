@@ -84,8 +84,6 @@
 				<p class="success">SUCCESS</p>
 				<p class="title">世界各地试管婴儿成功率大PK</p>
 				<p class="content_text">早在上世纪40年代科学家们就在进行试管婴儿实验研究，而我国试管婴儿技术起步较晚，大陆地区首例试管婴儿在1998年才诞生，美国和泰国是世界上试管婴儿最发达的国家。试管婴儿的出现给不孕不育患者带了福音，对很多来说，试管婴儿技术成为他们延续生命的唯一希望。</p>
-				<p class="address1">不明原因不孕不育可以做试管吗？</p>
-				<p class="address2">卵巢早衰，输卵管堵塞可以做试管吗？</p>
 				<a class="consult" href="#">试管婴儿哪里性价比高？咨询在线专家</a>
 			</div>
 		</div>
@@ -111,7 +109,7 @@
 							<a href="" class="button">立即咨询</a>
 						</div>
 						<div class="box_right">
-							<img src="image/box_img.png">
+							<img src="image/hospital.png">
 						</div>
 					</div>
 					<div class="factor_box">
@@ -160,9 +158,13 @@
 	</div>
 
 	<!-- reason -->
-	<div class="reason">
+	<div class="reason advantage">
 		<div class="w_1200">
-			<div class="reason_title">
+			<div class="title_container">
+				<p class="title">心安国际如何保证高成功率？</p>
+				<p class="country"><span></span>RUSSIA - UNITED STATES - THAILAND - CHINA - RUSSIA COMPARATIVE ADVANTAGE<span class="after"></span></p>
+			</div>
+			<!-- <div class="reason_title">
 				<p class="title_text">心安国际如何保证高成功率？</p>
 				<a href="">点击咨询</a>
 			</div>
@@ -170,7 +172,7 @@
 				<span class="title_footer_line"></span>
 				<span class="title_footer_text">RUSSIAN TEST TUBE BABY DOCTOR TEAM</span>
 				<span class="title_footer_tel">服务热线：400-661-6665</span>
-			</div>
+			</div> -->
 			<div class="methods_list clearfix">
 				<div class="list_left">
 					<div class="method_item ie_method_item">
@@ -221,7 +223,7 @@
 							<span></span>
 						</div>
 						<p class="tel">400-661-6665</p>
-						<p class="tips">您还可以留下您的联系方式，助力会第一时间联系您</p>
+						<p class="tips">您还可以留下您的联系方式，助理会第一时间联系您</p>
 						<form class="consult_form">
 							<input type="text">
 							<input type="text">
@@ -274,9 +276,13 @@
 	</div>
 
 	<!-- experience -->
-	<div class="reason experience">
+	<div class="reason experience advantage">
 		<div class="w_1200">
-			<div class="reason_title">
+			<div class="title_container">
+				<p class="title">分享 · 她们的经验，让您的孕途不走冤枉路</p>
+				<p class="country"><span></span>RUSSIA - UNITED STATES - THAILAND - CHINA - RUSSIA COMPARATIVE ADVANTAGE<span class="after"></span></p>
+			</div>
+			<!-- <div class="reason_title">
 				<p class="title_text">分享 · 她们的经验，让您的孕途不走冤枉路</p>
 				<a href="">点击咨询</a>
 			</div>
@@ -284,10 +290,10 @@
 				<span class="title_footer_line"></span>
 				<span class="title_footer_text">RUSSIAN TEST TUBE BABY DOCTOR TEAM</span>
 				<span class="title_footer_tel">服务热线：400-661-6665</span>
-			</div>
+			</div> -->
 			<div class="experience_container clearfix">
 				<div class="container_left">
-					<img src="image/bg_example.png">
+					<img src="image/bg_example.jpg">
 				</div>
 				<div class="container_right">
 					<div class="container_right_head">
@@ -339,13 +345,13 @@
 						</div>
 					</div>
 					<div class="button_group">
-						<a href="" class="up">
+						<a href="javascript:;" class="up">
 							<span></span>
 						</a>
-						<a href="" class="down">
+						<a href="javascript:;" class="down">
 							<span></span>
 						</a>
-						<a href="" class="consult">立即咨询</a>
+						<a href="javascript:;" class="consult">立即咨询</a>
 					</div>
 				</div>
 			</div>
@@ -378,6 +384,16 @@
 						<li>9000+客户成功案例经验</li>
 					</ul>
 				</div>
+			</div>
+			<!-- line -->
+			<div class="line">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<span class="title">更多试管资讯</span>
 			</div>
 			<div class="advantage_foot clearfix">
 				<div class="news_box">
@@ -479,14 +495,14 @@
 				</div>
 				<div class="links">
 					<span>友情链接</span>
-					<ul>
+					<!-- <ul>
 						<li><a href="">友情链接1</a></li>|
 						<li><a href="">友情链接2</a></li>|
 						<li><a href="">友情链接3</a></li>|
 						<li><a href="">友情链接4</a></li>|
 						<li><a href="">友情链接5</a></li>|
 						<li><a href="">友情链接5</a></li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>
@@ -526,6 +542,7 @@
 				else{
 					moveLeft = (clickNum * width + clickNum * marginWidth - 338) * -1;
 				}
+				$(".box_container .box_list").stop();
 				$(".box_container .box_list").animate({'left':moveLeft}, 600);
 			});
 		})

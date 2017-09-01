@@ -351,7 +351,6 @@
 	margin: 15px 0 10px 0;
 	padding-bottom: 10px;
 	border-bottom: 1px dashed #fff;
-	color: #1ebcd9;
 	font-size: 14px;
 }
 .doctor_box .doctor_inf .name .icon{
@@ -657,9 +656,8 @@
 	color:#fff;
 }
 .company_introduce .content .content_middle .content_middle_container .img_container{
-	width: 150px;
-	height: 150px;
-	margin-left: 6px;
+	width: 163px;
+	height: 162px;
 	background-color: #fff;
 	border-radius: 50%;
 	border-bottom-right-radius: 0;

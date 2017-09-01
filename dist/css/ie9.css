@@ -1,0 +1,116 @@
+.methods_list .list_middle,
+.methods_list .list_left,
+.methods_list .list_right{
+	float: left;
+	box-sizing: border-box;
+}
+.methods_list .list_middle{
+	width: 280px;
+}
+.methods_list .list_left,
+.methods_list .list_right{
+	width: 460px;
+}
+.methods_list .list_right{
+	float: right;
+}
+.method_item .item_content{
+	margin-right: 50px;
+}
+.list_left .method_item .item_icon{
+	float: right;
+	position: relative;
+	top: -110px;
+}
+
+.list_right .method_item .item_content{
+	margin-left: 50px;
+	width: 410px;
+}
+.list_right .method_item .item_icon{
+	float: left;
+}
+
+/* .experience .container_right */
+.experience .container_left,
+.experience .container_right{
+	float: left;
+}
+.experience .container_right{
+	width: 564px;
+	box-sizing: border-box;
+}
+
+/*.container_right .experience_list .list_item .item_left*/
+.container_right .experience_list .list_item .item_left,
+.container_right .experience_list .list_item .item_right{
+	float: left;
+	box-sizing: border-box;
+}
+.container_right .experience_list .list_item .item_left{
+	width: 369px;
+}
+
+/* .container_right .button_group a */
+.container_right .button_group a{
+	float: left;
+	width: 168px;
+}
+
+/* .advantage_middle .img_container */
+.advantage_middle .img_container,
+.advantage_middle .company_inf,
+.advantage_middle .advantage_list{
+	float: left;
+}
+
+/* .advantage .advantage_foot .news_box */
+.advantage .advantage_foot .news_box{
+	float: left;
+}
+/* .advantage_foot .news_box .box_head span */
+.advantage_foot .news_box .box_head{
+	height: 66px;
+	line-height: 66px;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+.advantage_foot .news_box .box_head i{
+	vertical-align: middle;
+}
+
+/*.factor_box .box_left,
+.factor_box .box_right*/
+.factor_box .box_left,
+.factor_box .box_right{
+	float: left;
+}
+.factor_box .box_left{
+	margin-right: 5px;
+}
+
+/*.title_container .country*/
+.title_container .country:before,
+.title_container .country:after{
+	display: none;
+}
+.title_container .country span{
+	display: block;
+}
+
+/* .container_right .container_right_head:before */
+.container_right .container_right_head:before{
+	display: none;
+}
+.container_right .container_right_head .triangle{
+	display: block;
+}
+
+/*ie_method_item*/
+.ie_method_item{
+	background-color: #efffef;
+}
+
+.footer .foot_right .foot_right_content .box_item.border-right-none{
+	border-right: 0;
+}

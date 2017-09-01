@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<input type="text" name="name" id="foo">
+	<input type="text" name="name" id="name">
+	<script type="text/javascript">
+		// var d = new Date();
+		// Object.defineProperty(d, 'month', {
+		// 	get:function() {
+		// 		return d.getMonth();
+		// 	},
+		// 	set:function(value){
+		// 		d.setMonth(value);
+		// 	}
+		// });
+
+
+
+		// var o = Object.create(Object.prototype,{
+		// 	foo:{
+		// 		get: function() {
+		// 			return 'getter';
+		// 		},
+		// 		set: function(value) {
+		// 			console.log('setter: ' + value)
+		// 		}
+		// 	}
+		// });
+
+
+		// var user = {};
+		// Object.defineProperty(user, 'name', {
+		// 	get:function() {
+		// 		return document.getElementById('foo').value; 
+				
+		// 	},
+		// 	set: function(value) {
+		// 		document.getElementById('foo').value = value;
+		// 		console.log(user.name);				
+		// 	},
+		// 	configurable: true
+		// })
+		// function setName() {
+		// 	document.getElementById('name').value = user.name;
+		// }
+		// var inter = setInterval(setName, 100)
+
+
+		// var o = {
+		// 	p: 1
+		// }
+		// console.log(Object.isExtensible(o))
+		// Object.preventExtensions(o);
+		// console.log(Object.isExtensible(o))
+
+
+		var o = {
+			p: 1
+		}
+		Object.seal(o);
+		delete o.p;
+
+	</script>
+</body>
+</html>
