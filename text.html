@@ -59,12 +59,37 @@
 		// console.log(Object.isExtensible(o))
 
 
-		var o = {
-			p: 1
-		}
-		Object.seal(o);
-		delete o.p;
+		// var o = {
+		// 	p: 1
+		// }
+		// Object.seal(o);
+		// delete o.p;
 
+
+		var Vehicle = function() {
+			this.door = 4
+		};
+		Vehicle.prototype = {
+			getName:function() {
+				return 'Vehicle'
+			},
+			getInfo:function() {
+				return[this.getName(), 'has', this.door, 'doors'].join(' '); 
+			}
+		}
+		var vehicle1 = new Vehicle();
+		vehicle1.getInfo();
+
+
+		function Car(){
+			// Vehicle.call(this);
+		}
+	    // Car.prototype = new Vehicle();
+		// Car.prototype.constructor = Car;
+		var car1 = new Car();
+		car1.door = 2;
+		// car1.getInfo = vehicle1.getInfo;
+		car1.getInfo()
 	</script>
 </body>
 </html>

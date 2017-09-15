@@ -3,7 +3,8 @@ $(function() {
 	var num = $('.adapt_crowd .box_list').children('li').length;//获取子元素数量
 	var showNum = num - 4;
 	var allWidth = width * num + 24 * num;
-	$('.adapt_crowd .box_list').width(allWidth);
+	var boxList = $('.adapt_crowd .box_list');
+	boxList.width(allWidth);
 	var i = 0;
 
 	
@@ -11,12 +12,14 @@ $(function() {
 	$('#right').click(function() {
 		i++;
 		if(i<showNum) {
-			$('.adapt_crowd .box_list').css("left", -(width+24)*i);
+			boxList.stop();
+			boxList.css("left", -(width+24)*i);
 			$('#left').css('background-color', '#1ebcd9');
 		}
 		else{
 			i=showNum;
-			$('.adapt_crowd .box_list').css("left", -(width+24)*i);
+			boxList.stop();
+			boxList.css("left", -(width+24)*i);
 			$('#right').css('background-color', '#c1c1c1');
 		}
 	});
@@ -24,12 +27,14 @@ $(function() {
 	$('#left').click(function() {
 		i--;
 		if(i>0) {
-			$('.adapt_crowd .box_list').css("left", -(width+24)*i);
+			boxList.stop();
+			boxList.css("left", -(width+24)*i);
 			$('#right').css('background-color', '#1ebcd9');
 		}
 		else{
 			i=0;
-			$('.adapt_crowd .box_list').css("left", 0);
+			boxList.stop();
+			boxList.css("left", 0);
 			$('#left').css('background-color', '#c1c1c1');
 		}
 	});
@@ -49,11 +54,13 @@ $(function() {
 	$("#right_doctor").click(function() {
 		j++;
 		if(j<doctorShowNum) {
+			doctorUl.stop();
 			doctorUl.animate({left: -(doctorWidth + 8)*j}, 500);
 			$('#left_doctor').css('background-color', '#1ebcd9');
 		}
 		else{
 			j=doctorShowNum;
+			doctorUl.stop();
 			doctorUl.animate({left: -(doctorWidth + 8)*j}, 500);
 			$('#right_doctor').css('background-color', '#c1c1c1');
 		}
@@ -62,11 +69,13 @@ $(function() {
 	$('#left_doctor').click(function() {
 		j--;
 		if(j>0) {
+			doctorUl.stop();
 			doctorUl.animate({left: -(doctorWidth + 8)*j}, 500);
 			$('#right_doctor').css('background-color', '#1ebcd9');
 		}
 		else{
 			j=0;
+			doctorUl.stop();
 			doctorUl.animate({left: 0}, 500);
 			$('#left_doctor').css('background-color', '#c1c1c1');
 		}

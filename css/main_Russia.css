@@ -147,6 +147,24 @@
     filter: blur(8px);
     overflow: hidden;
 }
+.adapt_crowd .list_container .box_list .box .img_container .mark_img1{
+	background-image: url(../image/crowd_img1.png);
+}
+.adapt_crowd .list_container .box_list .box .img_container .mark_img2{
+	background-image: url(../image/crowd_img2.png);
+}
+.adapt_crowd .list_container .box_list .box .img_container .mark_img3{
+	background-image: url(../image/crowd_img3.png);
+}
+.adapt_crowd .list_container .box_list .box .img_container .mark_img4{
+	background-image: url(../image/crowd_img4.png);
+}
+.adapt_crowd .list_container .box_list .box .img_container .mark_img5{
+	background-image: url(../image/crowd_img5.png);
+}
+.adapt_crowd .list_container .box_list .box .img_container .mark_img6{
+	background-image: url(../image/crowd_img6.png);
+}
 .adapt_crowd .list_container .box_list .box .img_container img{
 	position: absolute;
 	bottom: -26px;
