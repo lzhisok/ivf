@@ -48,30 +48,33 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	filter:alpha(opacity=50);
 	z-index:-1;
 }
-.header .logo .logo_img{
+.header .logo .logo_img,
+.footer .logo .logo_img{
 	display: inline-block;
 	width: 53px;
 	height: 50px;
 	background: url(images/icon.png) no-repeat 0 0;
 }
-.header .logo .logo_text{
+.header .logo .logo_text,
+.footer .logo .logo_text{
 	display: inline-block;
 	vertical-align: top;
+	color: #fff;
 }
-.header .logo .logo_text p{
+.header .logo .logo_text p,
+.footer .logo .logo_text p{
 	margin: 5px 0;
 	line-height: 1;
 	font-size: 28px;
 	font-weight: bold;
-	color: #fff;
 }
-.header .logo .logo_text span{
+.header .logo .logo_text span,
+.footer .logo .logo_text span{
 	display: block;
     height: 15px;
     line-height: 15px;
     border-top: 1px solid #ccc;
     font-size: 12px;
-    color: #fff;
 }
 .header .header_left .tel{
 	color: #fff;
@@ -283,10 +286,12 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	margin: -18px auto 0 auto;
 	background-color: #fff;
 	font-size: 30px;
+	font-weight: bold;
 	color: #46bb9e;
 	text-align: center;
 }
 #activity1 .con_right .title .text{
+	font-weight: normal;
 	font-size: 14px;
 	margin-top: 10px;
 }
@@ -611,8 +616,9 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 .situation_item .item_text{
 	position: relative;
+	width: 60%;
 	display: inline-block;
-	vertical-align: 25px;
+	vertical-align: top;
 	border-radius: 5px;
 	padding: 10px 15px;
 	margin-left: 30px;
@@ -647,7 +653,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
 .situation_item .consult_wrapper{
 	float: right;
-	width: 405px;
+	width: 420px;
 	padding: 10px 0;
 	height: 50px;
 	border: 1px solid #a6a6a6;
@@ -676,7 +682,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	width: 1000px;
 	margin: 0 auto;
 	border: 1px solid #a6a6a6;
-	border-radius: 5px;
+	border-radius: 15px;
 	font-size: 0;
 }
 .activity2 .reminder span{
@@ -1000,4 +1006,80 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	background-color: #aa7556;
 	padding: 3px 10px 5px;
 	color: #fff;
+}
+
+/*news*/
+.news{
+	border-top: 5px solid #4ac5a8;
+	margin-top: 100px;
+	padding-top: 30px;
+}
+.news .news_box .box_item{
+	float: left;
+	width: 30%;
+	margin-right: 50px;
+}
+.news .news_box .box_item .title{
+	padding: 10px 20px;
+	border-bottom: 1px solid #a6a6a6;
+	font-size: 18px;
+	font-weight: bold;
+	color: #4ac5a8;
+}
+.news .news_box .box_item .title .icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 34px;
+	height: 34px;
+}
+.news .news_box .box_item .title .icon1{
+	background: url(images/icon.png) no-repeat -200px -50px;
+}
+.news .news_box .box_item .title .icon2{
+	background: url(images/icon.png) no-repeat -250px -50px;
+}
+.news .news_box .box_item .title .icon3{
+	background: url(images/icon.png) no-repeat -300px -50px;
+}
+.news .news_box .box_item .news_list{
+	margin: 30px 0 0 40px;
+	list-style: disc;
+	line-height: 24px;
+	font-size: 14px;
+	color: #aaa;
+}
+.news .news_box .box_item .news_list li{
+	padding-left: 10px;
+}
+
+/*footer*/
+.footer{
+	width: 100%;
+	height: 98px;
+	line-height: 98px;
+	margin-top: 50px;
+	background:url(images/header_bg.png) no-repeat;
+}
+.footer .logo{
+	float: left;
+}
+.footer .logo .logo_text,
+.footer .logo .logo_img{
+	display: inline-block;
+	vertical-align: middle;
+}
+.footer .copyright{
+	float: right;
+	margin-top: 30px;
+	color: #fff;
+	text-align: right;
+}
+.footer .copyright .Chinese{
+	font-size: 18px;
+	line-height: 1;
+	margin-bottom: 6px;
+}
+.footer .copyright .English{
+	font-size: 12px;
+	line-height: 1;
 }
