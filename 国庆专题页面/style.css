@@ -20,7 +20,9 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 .margin_right_none{
 	margin-right: 0!important;
 }
-
+a{
+	outline: none;
+}
 /* header */
 .header{
 	width: 100%;
@@ -35,7 +37,8 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	box-sizing: border-box;
 	position: relative;
 	z-index: 2;
-}
+	background:rgba(0,0,0,0.12); 
+}/*
 .header .header_left:before{
 	content: '';
 	position: absolute;
@@ -45,9 +48,8 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	width: 210px;
 	height: 98px;
 	background:rgba(0,0,0,0.12); 
-	filter:alpha(opacity=50);
 	z-index:-1;
-}
+}*/
 .header .logo .logo_img,
 .footer .logo .logo_img{
 	display: inline-block;
@@ -166,8 +168,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	margin-left: 45px;
 	text-align: center;
 }
-.activity_card .cards_list .card_item:after{
-	content: "";
+.activity_card .cards_list .card_item .after{
 	position: absolute;
 	width: 52px;
 	height: 48px;
@@ -188,11 +189,13 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 .activity_card .cards_list .card_item .title i{
 	display: inline-block;
-	vertical-align: -15px;
 	margin-right: 5px;
 	font-size: 58px;
 	font-weight: bold;
 	font-style: italic;
+}
+.activity_card .cards_list .card_item .title span{
+	vertical-align: top;
 }
 .activity_card .cards_list .card_item .card_con{
 	background-color: #fff;
@@ -215,7 +218,6 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 #activity1 .con_left{
 	float: left;
 	width: 260px;
-	height: 536px;
 	position: relative;
 	padding-top: 10px;
 	border-right: 1px solid #a6a6a6;
@@ -322,14 +324,16 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	left: -16px;
 }
 #activity1 .con_right .factor_wrapper{
-	margin-top: 100px;
+	margin-top: 60px;
 }
 .factor_wrapper .factors_list .factor_item{
 	float: left;
 	position: relative;
 	width: 158px;
+	height: 230px;
 	padding: 8px 5px 0;
 	background-color: #46bb9e;
+	background: url(images/icon.png) no-repeat -200px -200px;
 	margin-right: 10px;
 }
 .factor_wrapper .factors_list .margin_right_none{
@@ -340,7 +344,8 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 .factor_wrapper .factors_list .factor_item img{
 	display: block;
-	width: 150px;
+	width: 156px;
+	height: 162px;
 	margin: 0 auto;
 }
 .factor_wrapper .factors_list .factor_item .text{
@@ -351,7 +356,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 .factor_wrapper .factors_list .factor_item .btn_consult{
 	position: absolute;
-	bottom: -56px;
+	bottom: -30px;
 	left: 56px;
 	width: 40px;
 	height: 40px;
@@ -364,8 +369,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	text-align: center;
 }
 .factor_wrapper .factors_list .factor_item span.triangle_after{
-	position: absolute;
-	
+	position: absolute;	
 	left: 0;
 	width: 168px;
 	height: 40px;
@@ -373,6 +377,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 .factor_wrapper .factors_list .factor_item.even{
 	padding: 0 5px 8px;
+	background: url(images/icon.png) no-repeat 0px -200px;
 }
 .factor_wrapper .factors_list .factor_item.odd span.triangle_after{
 	bottom: -40px;
@@ -387,14 +392,19 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	background-repeat: no-repeat;
 }
 .factor_wrapper .factors_list .factor_item.even .btn_consult{
-	top: -56px;
+	top: -30px;
+}
+.factor_wrapper .factors_list .factor_item.even .text{
+	margin-top: 20px;
+	padding-bottom: 10px;
 }
 
 #activity1 .con_right .tips{
-	margin-top: 50px;
-	padding: 10px;
-	background-color: #75ddc3;
 	position: relative;
+	margin-top: 50px;
+	padding: 5px 5px;
+	border-radius: 10px;
+	background-color: #75ddc3;
 }
 .tips .up,
 .tips .down{
@@ -414,28 +424,73 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	transform: perspective(10px) rotateX(-5deg)
 }
 .tips .tips_con{
-	height: 74px;
+	padding: 15px;
 	background-color: #83e0c9;
-	border: 5px solid transparent;
-	border-image:  5 repeating-linear-gradient(90deg,
- #58a 0, #58a 3em,
- transparent 0, transparent 4em);
-);
+	background: url(images/tips_border_bg.png) no-repeat center center;
+	background-size: 100% 100%;
 }
 .tips .tips_icon{
-	margin-top: 12px;
 	display: inline-block;
 	width: 194px;
-	height: 50px;
+	height: 44px;
 	background: url(images/icon.png) no-repeat -150px -100px;
+	background-origin: border-box;
 }
 .tips .con_text{
 	display: inline-block;
 	width: 600px;
+	height: 44px;
+	margin: 0px 0 0 40px;
+	line-height: 24px;
 	vertical-align: top;
 	font-size: 18px;
 	color: #fff;
-	margin: 15px 0 0 10px;
+}
+#activity1 .w_1200{
+	position: relative;
+}
+#activity1 .middle_nav{
+	position: fixed;
+	left: 0px;
+	top: 50%;
+	width: 52px;
+	padding: 30px 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #35b597;
+}
+#activity1 .middle_nav .benefit{
+	display: block;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+}
+#activity1 .middle_nav .benefit.last{
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+#activity1 .middle_nav .benefit i{
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 0 auto 3px;
+}
+#activity1 .middle_nav .benefit p{
+	display: inline-block;
+}
+#activity1 .middle_nav .benefit .icon_benefit1{
+	background: url(images/icon.png) no-repeat 0 -50px;
+}
+#activity1 .middle_nav .benefit .icon_benefit2{
+	background: url(images/icon.png) no-repeat -50px -50px;
+}
+#activity1 .middle_nav .benefit .icon_benefit3{
+	background: url(images/icon.png) no-repeat -100px -50px;
+}
+#activity1 .middle_nav .benefit .icon_benefit4{
+	background: url(images/icon.png) no-repeat -150px -50px;
 }
 
 /* registration_method */
@@ -519,9 +574,10 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	color: #fff;
 }
 .method_item .btn_wrapper .btn_head{
-	font-size: 20px;
 	padding-bottom: 3px;
 	border-bottom: 1px solid #fff;
+	font-size: 20px;
+	font-weight: bold;
 }
 .method_item .btn_wrapper .btn_foot{
 	font-size: 12px;
@@ -534,29 +590,28 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
 /* #activity2*/
 #activity2{
-	margin-top: 100px;
+	padding-top: 100px;
 }
 
 .title_wrapper{
-	margin-top: 100px;
 	border-top: 1px solid #a6a6a6;
 }
 
 .title_wrapper .title{
 	position: relative;
-	max-width: 500px;
+	width: 500px;
 	height: 50px;
 	margin: -18px auto 0 auto;
 	padding: 0 30px;
 	background-color: #fff;
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: bold;
 	color: #46bb9e;
 	text-align: center;
 }
 .title_wrapper .title .text{
-	margin-top: 10px;
-	font-size: 14px;
+	margin-top: 20px;
+	font-size: 16px;
 	font-weight: normal;
 }
 .title_wrapper .title>span{
@@ -623,6 +678,8 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	padding: 10px 15px;
 	margin-left: 30px;
 	border: 1px solid #a6a6a6;
+	text-align: left;
+	color: #616161;
 }
 .list_right .situation_item .item_text{
 	margin-left: 0;
@@ -667,6 +724,10 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	outline: none;
 	resize: none;
 	padding: 0 20px;
+	overflow: auto;
+}
+.situation_item .consult_wrapper textarea::-webkit-input-placeholder{
+	color: #c6c6c6;
 }
 .situation_item .consult_wrapper .btn_submit{
 	float: right;
@@ -684,14 +745,15 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	border: 1px solid #a6a6a6;
 	border-radius: 15px;
 	font-size: 0;
+	color: #616161;
 }
 .activity2 .reminder span{
 	display: inline-block;
 	width: 13%;
 	padding: 20px;
+	box-sizing: border-box;
 	font-size: 18px;
 	font-weight: bold;
-	box-sizing: border-box;
 }
 .activity2 .reminder .text{
 	display: inline-block;
@@ -701,35 +763,80 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 
 /*activity3*/
+#activity3 {
+	padding-top: 100px;
+}
 #activity3 .title_wrapper .title{
+	width: 600px;
 	padding: 0 80px;
 }
 #activity3 .head_text,
 #activity4 .head_text{
 	margin-top: 30px;
-	padding: 10px 20px;
 	border: 2px solid #fddd14;
 	border-radius: 10px;
 	background-color: #e2fffa;
-	color: #43937e;
+	line-height: 24px;
+	font-size: 15px;
+}
+#activity3 .head_text{
+	padding: 10px 20px;
+	color: #0e7e63;
 }
 #activity3 .question_list_wrapper{
 	margin-top: 30px;
 }
 .question_list_wrapper .question_list{
-	padding-left: 150px;
-	margin-bottom: 30px;
+	margin: 0 0 30px 50px;
+}
+.question_list .item_container{
+	position: relative;
+	float: left;
+	width: 240px;
+	height: 400px;
+	margin-right: 40px;
+	perspective: 1000;
+	-webkit-perspective: 1000;
+	transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transition: transform 0.5s linear;
+	-ms-transition: transform 0.5s linear;
 }
 .question_list .question_item{
-	float: left;
-	width: 200px;
-	height: 300px;
-	margin-right: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: inherit;
+	height: inherit;
 	padding-top: 50px;
 	background-color: #43bda0;
-	-webkit-clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 90%, 75% 100%,25% 100%,0 90%);
+	background: url(images/questionItem_bg.png) no-repeat center center;
+	background-size: 100%;
 	color: #fff;
 	box-sizing: border-box;
+}
+.question_list .question_item.front,
+.question_list .question_item.back{
+	backface-visibility: visible;
+}
+.question_list .item_container:hover{
+	transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+}
+.question_list .question_item.front{
+	z-index: 2
+}
+.question_list .question_item.back{
+	transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+}
+.question_list .question_item.back p{
+	margin-top: 15px;
+	background-color: #ccede5;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	color: #024e3c;
 }
 .question_list .question_item i{
 	display: block;
@@ -744,8 +851,9 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	text-align: center;
 }
 .question_list .question_item p{
-	margin-top: 30px;
-	padding: 15px;
+	width: 196px;
+	margin: 30px auto 0;
+	padding: 15px 10px;
 	background-color: #169174;
 	text-align: center;
 	font-size: 24px;
@@ -756,21 +864,42 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	display: block;
 	font-size: 18px;
 }
+.question_list .question_item a{
+	position: absolute;
+	left: 68px;
+	bottom: 0;
+	padding: 10px;
+	color: #fff;
+	font-size: 14px;
+}
+.question_list .question_item a:hover{
+	color: #aaa;
+}
 
 /*activity4*/
 #activity4{
-
+	padding-top: 100px;
+}
+#activity4 .doctors_list_wrapper{
+	margin-top: 50px;
 }
 #activity4 .doctor_item{
 	position: relative;
+	height: 363px;
+	border-bottom: 2px solid #26a083;
 }
 #activity4 .doctor_item .img_wrapper{
 	display: inline-block;
+	margin-left: 160px;
+}
+#activity4 .doctor_item .img_wrapper img{
+	display: block;
 }
 #activity4 .doctor_item .doctor_intro{
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 50px;
+	margin: 60px 0 0 100px;
+	color: #636363;
 }
 .doctor_intro .new{
 	position: relative;
@@ -801,9 +930,9 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 .doctor_item .item_right_icon{
 	position: absolute;
 	right: 200px;
-	top: 50px;
+	top: 80px;
 	width: 10px;
-	height: 200px;
+	height: 250px;
 	border: 2px solid transparent;
 	border-top-color: #46bb9e;
 	border-right-color: #46bb9e;
@@ -818,7 +947,12 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	border: 2px solid #46bb9e;
 	border-radius: 50%;
 }
+.activity4 .head_text{
+	color: #6f6f6f;
+	padding: 20px;
+}
 
+/*special*/
 .special .title{
 	padding-top: 30px;
 	height: 96px;
@@ -856,16 +990,25 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 }
 .special .mode_wrapper .tel{
 	position: absolute;
-	right: 40px;
+	right: 20px;
 	top: 50px;
-	width: 124px;
+	width: 145px;
 	height: 30px;
 	line-height: 30px;
 	padding-left: 10px;
 	background-color: #fff;
 	font-weight: bold;
+	font-size: 16px;
 	color: #aa7556;
 	z-index: 1;
+}
+.special .mode_wrapper .tel .icon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 1px;
+    vertical-align: -2px;
+    background: url(images/icon.png) no-repeat -250px 0; 
 }
 .special .mode_wrapper .btn_consult{
 	position: absolute;
@@ -876,8 +1019,15 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	border-radius: 5px;
 	color: #fff
 }
+.special .w_1200 .item_wrapper{
+	padding: 10px 36px;
+}
 .special .item_wrapper .method_item{
-	padding-top: 8px;
+	padding-top: 14px;
+	height: 97px;
+}
+.special .item_wrapper .method_item .form input{
+	width: 215px;
 }
 .special .item_wrapper .foot_text{
 	font-size: 12px;
@@ -888,13 +1038,16 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
 
 /* company_int */
+.company_int{
+	padding-top: 100px;
+}
 .company_int .title_wrapper .title{
 	max-width: 700px;
 	width: 700px;
 }
 .company_int .int_main{
 	margin-top: 50px;
-	padding-left: 100px;
+	padding-left: 90px;
 }
 .company_int .int_left{
 	position: relative;
@@ -909,6 +1062,15 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	width: 206px;
 	height: auto;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 85%);
+}
+.company_int .int_left .int_text{
+	margin-top: 40px;
+	line-height: 22px;
+	text-indent: 20px;
+	color: #343434;
+}
+.company_int .int_left .int_text span{
+	font-weight: bold;
 }
 .company_int .int_left .triangle{
 	position: absolute;
@@ -926,7 +1088,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	vertical-align: top;
 }
 .company_int .int_right .advantage_list{
-	margin: 20px 0 0 50px;
+	margin-left: 50px;
 }
 .company_int .int_right .advantage_list .advantage_item{
 	width: 100px;
@@ -974,13 +1136,14 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 	width: 165px;
 	height: 234px;
 	background-color: #fff9e1;
-	margin-right: 20px;
+	background: url(images/numberCard_bg.png) no-repeat center center /99% 100%;
+	margin-right: 30px;
 	padding-bottom: 20px;
-	border: 1px solid #fed5d3;
 	text-align: center;
 }
 .int_right .numberCard_list .card_item .title{
-	margin-top: 30px;
+	width: 144px;
+	margin: 30px auto 0;
 	background-color: #aa7556;
 	padding: 0px 5px;
 }

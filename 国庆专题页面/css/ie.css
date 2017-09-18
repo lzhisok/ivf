@@ -1,0 +1,30 @@
+.header .header_left{
+	height: 68px;
+}
+.header .logo .logo_img,.header .logo .logo_text,.situation_item .img_wrapper,.situation_item .item_text{
+	display: inline;
+}
+.header .header_left .opacity{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background:#000;
+	filter: Alpha(opacity=12);
+	z-index:-1;
+}
+.tips .down{
+	border-radius: 0 0 3px 3px;
+}
+.tips .tips_con{
+	height: 58px;
+	background: url(images/tips_border_bg.png) no-repeat center center;
+	background-size: 100%;
+}
+.question_list .item_container:hover .question_item.back{
+	z-index: 3;
+}
+.question_list .question_item{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/questionItem_bg.png",sizingMethod='scale');
+}
