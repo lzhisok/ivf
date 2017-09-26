@@ -38,18 +38,7 @@ a{
 	position: relative;
 	z-index: 2;
 	background:rgba(0,0,0,0.12); 
-}/*
-.header .header_left:before{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	display: block;
-	width: 210px;
-	height: 98px;
-	background:rgba(0,0,0,0.12); 
-	z-index:-1;
-}*/
+}
 .header .logo .logo_img,
 .footer .logo .logo_img{
 	display: inline-block;
